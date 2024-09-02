@@ -1,0 +1,58 @@
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid' 
+import calendar from "/Icons/calendar.svg";
+
+export default function DropDown({title, icon}) {
+    return (
+    <Menu as="div" className="relative inline-block text-left border-color-textGray">
+        <div>
+            <MenuButton className="inline-flex md:w-[auto] w-64 justify-between gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm 2xl:text-base font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                {title}
+            <img src={icon} alt="" />
+            </MenuButton>
+        </div>
+
+        <MenuItems
+            transition
+            className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-color-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+        >
+            <div className="py-1">
+                <MenuItem MenuItem>
+                    <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-color-red data-[focus]:bg-gray-100 data-[focus]:text-color-grey"
+                    >
+                        Account settings
+                    </a>
+                </MenuItem>
+                <MenuItem>
+                    <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-color-red data-[focus]:bg-gray-100 data-[focus]:text-color-grey"
+                    >
+                        Support
+                    </a>
+                </MenuItem>
+                <MenuItem>
+                    <a
+                        href="#"
+                        className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+                    >
+                        License
+                    </a>
+                </MenuItem>
+                <form action="#" method="POST">
+                    <MenuItem>
+                        <button
+                        type="submit"
+                        className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+                        >
+                        Sign out
+                        </button>
+                    </MenuItem>
+                </form>
+            </div>
+        </MenuItems>
+    </Menu>
+    );
+};

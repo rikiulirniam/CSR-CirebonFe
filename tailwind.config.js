@@ -1,0 +1,46 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+    fontFamily: {
+      inter: ["Inter", "sans-serif"], // Tambahkan konfigurasi ini
+    },
+    colors: {
+      color: {
+        white: "#ffffff",
+        red: "#98100A",
+        red50: "#FFF1F0",
+        red100:"#FFDDDC",
+        red900: "#98100A",
+        darkRed: "#510300",
+        darkBlue: "#101828",
+        orange: "#FF5D56",
+        light: "#fff9eb",
+        grey: "#f2f3f6",
+        gray100: "#F2F4F7",
+        gray300: "#D0D5DD",
+        gray200: "#EAECF0",
+        gray500: "#667085",
+        grey700: "#344054",
+        gray900: "#101828",
+        lightGray: "#f2f2f2",
+        success50: "#ECFDF3",
+        success700: "#027A48",
+        warning50: "#FFFAEB",
+        warning700: "#B54708",
+        darkGrey: "#777777",
+        blue: "#2c5586",
+        blue50 : "#F4F7FB",
+        blue700: "#2C5586",
+        textGray: "#777777",
+        green: "#1d9c53",
+        lightGreen: "#ebfdf2",
+        purple: "#7959f8",
+        freshOrange: "#f95016",
+        pink: "#FFDDDC",
+      },
+    },
+  },
+  plugins: [],
+};
